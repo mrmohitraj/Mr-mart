@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Payment | MR MART</title>
+
+<link rel="stylesheet" href="payment.css">
+
+</head>
+
+<body>
+
+<div class="payment-box">
+
+<h1>💳 Payment</h1>
+
+<h3>Select Payment Method</h3>
+
+<label>
+<input type="radio" name="pay" checked>
+💵 Cash on Delivery
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+📱 UPI
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+🟣 PhonePe
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="pay">
+🟢 Google Pay
+</label>
+
+<br><br>
+
+<button onclick="placeOrder()">
+Place Order
+</button>
+
+<p id="msg"></p>
+
+</div>
+
+<script src="payment.js"></script>
+
+</body>
+</html>
