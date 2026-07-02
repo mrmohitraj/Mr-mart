@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,6 @@
 <body>
 
 <header class="header">
-
 <div class="logo-box">
 <h1>🛒 MR MART</h1>
 <p>Shop Smart, Live Better</p>
@@ -20,11 +18,13 @@
 <div class="cart-icon">
 🛒 <span id="cart-count">0</span>
 </div>
-
 </header>
 
 <div class="search-box">
-<input type="text" id="search" placeholder="🔍 Search Products...">
+<input
+type="text"
+id="search"
+placeholder="🔍 Search Products...">
 </div>
 
 <div class="offer-banner">
@@ -36,39 +36,40 @@
 
 <div class="categories">
 
-<div class="category">
-🥬<br>
-Vegetables
-</div>
+<div class="category">🥬<br>Vegetables</div>
 
-<div class="category">
-🍎<br>
-Fruits
-</div>
+<div class="category">🍎<br>Fruits</div>
 
-<div class="category">
-🥛<br>
-Dairy
-</div>
+<div class="category">🥛<br>Dairy</div>
 
-<div class="category">
-🍪<br>
-Snacks
-</div>
+<div class="category">🍪<br>Snacks</div>
 
-<div class="category">
-🥤<br>
-Drinks
-</div>
+<div class="category">🥤<br>Drinks</div>
 
-<div class="category">
-🧴<br>
-Personal Care
-</div>
+<div class="category">🧴<br>Personal Care</div>
 
 </div>
 
-<div class="cart-box">
+<div id="cart-panel" class="cart-panel">
+
+<h2>🛒 My Cart</h2>
+
+<div id="cart-items">
+Your cart is empty.
+</div>
+
+<h3>Total : ₹<span id="total">0</span></h3>
+
+<button id="checkout-btn" onclick="checkout()">
+Proceed to Checkout
+</button>
+
+</div>
+
+<!-- Cart Open Button -->
+<div class="cart-open-btn" onclick="openCart()">
+🛒 <span id="cart-count">0</span>
+</div>
 
 <h2>🛒 My Cart</h2>
 
@@ -87,196 +88,240 @@ Proceed to Checkout
 <h2 class="title">🛒 Our Products</h2>
 
 <div class="products">
-<div class="product-card">
-<div class="product-image">🥛</div>
-<h3>Amul Milk 500ml</h3>
-<p class="price">₹34</p>
-<button onclick="addToCart('Amul Milk 500ml',34)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">🍚</div>
-<h3>Basmati Rice 1 Kg</h3>
-<p class="price">₹95</p>
-<button onclick="addToCart('Basmati Rice',95)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">🌾</div>
-<h3>Aashirvaad Atta 5 Kg</h3>
-<p class="price">₹290</p>
-<button onclick="addToCart('Aashirvaad Atta',290)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">🧂</div>
-<h3>Tata Salt 1 Kg</h3>
-<p class="price">₹30</p>
-<button onclick="addToCart('Tata Salt',30)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">🍪</div>
-<h3>Parle-G Biscuit</h3>
-<p class="price">₹10</p>
-<button onclick="addToCart('Parle-G Biscuit',10)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">🍞</div>
-<h3>Bread</h3>
-<p class="price">₹40</p>
-<button onclick="addToCart('Bread',40)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">🥚</div>
-<h3>Eggs (6 pcs)</h3>
-<p class="price">₹48</p>
-<button onclick="addToCart('Eggs',48)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">🛢️</div>
-<h3>Fortune Oil 1L</h3>
-<p class="price">₹165</p>
-<button onclick="addToCart('Fortune Oil',165)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">☕</div>
-<h3>Tata Tea 250g</h3>
-<p class="price">₹145</p>
-<button onclick="addToCart('Tata Tea',145)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">🍌</div>
-<h3>Banana (1 Dozen)</h3>
-<p class="price">₹60</p>
-<button onclick="addToCart('Banana',60)">Add +</button>
-</div>
-<div class="product-card">
-<div class="product-image">🍅</div>
-<h3>Tomato 1 Kg</h3>
-<p class="price">₹30</p>
-<button onclick="addToCart('Tomato',30)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">🧅</div>
-<h3>Onion 1 Kg</h3>
-<p class="price">₹35</p>
-<button onclick="addToCart('Onion',35)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">🥔</div>
-<h3>Potato 1 Kg</h3>
-<p class="price">₹28</p>
-<button onclick="addToCart('Potato',28)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">🧴</div>
-<h3>Clinic Plus Shampoo</h3>
-<p class="price">₹145</p>
-<button onclick="addToCart('Clinic Plus Shampoo',145)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
-</div>
-<div class="product-card">
-<div class="product-image">🪥</div>
-<h3>Colgate Toothpaste</h3>
-<p class="price">₹95</p>
-<button onclick="addToCart('Colgate Toothpaste',95)">Add +</button>
-</div>
-<div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
+  <div class="product-card">
+    <div class="product-image">🥛</div>
+    <h3>Amul Milk 500ml</h3>
+    <p class="price">₹34</p>
+    <button onclick="addToCart('Amul Milk 500ml',34)">Add +</button>
+
+    <div class="qty-box">
+    <button class="minus">-</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
 </div>
 </div>
 
+<div class="product-card">
+    <div class="product-image">🍚</div>
+    <h3>Basmati Rice 1 Kg</h3>
+    <p class="price">₹95</p>
+    <button onclick="addToCart('Basmati Rice',95)">Add +</button>
+
+<div class="qty-box">
+    <button class="minus">-</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>      
+</div>
+
+<div class="product-card">
+    <div class="product-image">🌾</div>
+    <h3>Aashirvaad Atta 5 Kg</h3>
+    <p class="price">₹290</p>
+    <button onclick="addToCart('Aashirvaad Atta',290)">Add +</button>
+  <div class="qty-box">
+    <button class="minus">-</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>
+
+</div>
+
+<div class="product-card">
+    <div class="product-image">🧂</div>
+    <h3>Tata Salt 1 Kg</h3>
+    <p class="price">₹30</p>
+    <button onclick="addToCart('Tata Salt',30)">Add +</button>
+
+    <div class="qty-box">
+    <button class="minus">-</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">🍪</div>
+    <h3>Parle-G Biscuit</h3>
+    <p class="price">₹10</p>
+    <button onclick="addToCart('Parle-G Biscuit',10)">Add +</button>
+
+    <div class="qty-box">
+    <button class="minus">-</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">🍞</div>
+    <h3>Bread</h3>
+    <p class="price">₹40</p>
+    <button onclick="addToCart('Bread',40)">Add +</button>
+
+    <div class="qty-box">
+    <button class="minus">-</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>
+</div>
+<div class="product-card">
+    <div class="product-image">☕</div>
+    <h3>Tata Tea 250g</h3>
+    <p class="price">₹145</p>
+    <button onclick="addToCart('Tata Tea',145)">Add +</button>
+
+    <div class="qty-box">
+    <button class="minus">-</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">🍌</div>
+    <h3>Banana (1 Dozen)</h3>
+    <p class="price">₹60</p>
+    <button onclick="addToCart('Banana',60)">Add +</button>
+
+    <div class="qty-box">
+    <button class="minus">-</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">🍅</div>
+    <h3>Tomato 1 Kg</h3>
+    <p class="price">₹30</p>
+    <button onclick="addToCart('Tomato',30)">Add +</button>
+
+    <div class="qty-box">
+    <button class="minus">-</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">🧅</div>
+    <h3>Onion 1 Kg</h3>
+    <p class="price">₹35</p>
+    <button onclick="addToCart('Onion',35)">Add +</button>
+
+    <div class="qty-box">
+    <button class="minus">-</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">🥔</div>
+    <h3>Potato 1 Kg</h3>
+    <p class="price">₹28</p>
+    <button onclick="addToCart('Potato',28)">Add +</button>
+
+    <div class="qty-box">
+    <button class="minus">-</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">🧴</div>
+    <h3>Clinic Plus Shampoo</h3>
+    <p class="price">₹145</p>
+    <button onclick="addToCart('Clinic Plus Shampoo',145)">Add +</button>
+
+    <div class="qty-box">
+    <button class="minus">-</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>
+</div>
+
+<div class="product-card">
+    <div class="product-image">🪥</div>
+    <h3>Colgate Toothpaste</h3>
+    <
 <section class="account-section">
+
 <h2>👤 My Account</h2>
 
-<button class="login-btn">Login / Sign Up</button>
+<button class="login-btn">
+Login / Sign Up
+</button>
 
-<p>📍 Delivery Address: Add your address</p>
+<p style="margin-top:15px;">
+📍 Delivery Address: Add your address
+</p>
 
 <button class="checkout-btn">
 💳 Proceed to Payment
 </button>
+
 </section>
 
 <footer class="footer">
+
 <h3>🛒 MR MART</h3>
+
 <p>📍 Lakhisarai, Bihar</p>
+
 <p>📞 +91 6200873964</p>
+
 <p>© 2026 MR MART. All Rights Reserved.</p>
+
 </footer>
 
 <nav class="bottom-nav">
-<a href="#">🏠<br>Home</a>
-<a href="#">🛍️<br>Products</a>
-<a href="#">🛒<br>Cart</a>
-<a href="#">👤<br>Account</a>
+
+<a href="#">
+🏠<br>Home
+</a>
+
+<a href="#">
+🛍️<br>Products
+</a>
+
+<a href="#">
+🛒<br>Cart
+</a>
+
+<a href="#">
+👤<br>Account
+</a>
+
 </nav>
 
 <script src="script.js"></script>
+<div id="payment-page" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:white; z-index:5000; padding:20px;">
+    <h2>💳 Payment Page</h2>
+    <p>Scan UPI or Pay Now</p>
 
+    <div style="margin-top:20px;">
+        <h3>Total Payable: ₹<span id="pay-amount">0</span></h3>
+    </div>
+
+    <button onclick="placeOrder()" style="padding:12px; background:#0a8f3d; color:white; border:none; margin-top:20px;">
+        Pay Now
+    </button>
+</div>
+
+<div id="success-page" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#eaffea; z-index:6000; text-align:center; padding-top:100px;">
+    <h1>🎉 Order Placed Successfully!</h1>
+    <p>Thank you for shopping with MR MART</p>
+
+    <button onclick="location.reload()" style="padding:10px 20px; margin-top:20px;">
+        Continue Shopping
+    </button>
+</div>
 </body>
-  </html>
-               
+</html>
+
+
+
+    
